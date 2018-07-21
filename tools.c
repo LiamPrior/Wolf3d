@@ -6,7 +6,7 @@
 /*   By: lprior <lprior@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/06/01 00:31:51 by pdavid            #+#    #+#             */
-/*   Updated: 2018/07/20 20:06:51 by lprior           ###   ########.fr       */
+/*   Updated: 2018/07/20 21:43:10 by lprior           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,6 +51,7 @@ void	pixel_put_img(t_env *j, int x, int y, int color)
 
 void	draw_vert(int x, int start, int end, t_env *all)
 {
+	// printf("%d %d\n", start, end);
 	if (start < end)
 	{
 		while (start != end)
@@ -67,4 +68,5 @@ void	draw_vert(int x, int start, int end, t_env *all)
 			start--;
 		}
 	}
+	// printf("out draw vert\n");
 }

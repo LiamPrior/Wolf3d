@@ -6,7 +6,7 @@
 /*   By: lprior <lprior@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/06/01 20:04:41 by pdavid            #+#    #+#             */
-/*   Updated: 2018/07/20 18:11:14 by lprior           ###   ########.fr       */
+/*   Updated: 2018/07/20 21:02:49 by lprior           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,7 +41,7 @@ int	keydown(int keycode, t_env *all)
 	t_env *e;
 
 	e = all;
-	printf("%d\n", keycode);
+	// printf("%d\n", keycode);
 	if (keycode == 53)
 		exit(1);
 	if (keycode == 13)

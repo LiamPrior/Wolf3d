@@ -6,7 +6,7 @@
 /*   By: lprior <lprior@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/30 20:03:53 by pdavid            #+#    #+#             */
-/*   Updated: 2018/07/20 20:13:51 by lprior           ###   ########.fr       */
+/*   Updated: 2018/07/20 22:45:45 by lprior           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ t_events	*init_events(void)
 {
 	t_events	*e;
 
-	e = malloc(sizeof(t_events));
+	e = (t_events *)malloc(sizeof(t_events));
 	e->w = 0;
 	e->a = 0;
 	e->s = 0;
@@ -28,7 +28,7 @@ t_ray		*init_ray(void)
 {
 	t_ray	*e;
 
-	if (!(e = malloc(sizeof(t_ray))))
+	if (!(e = (t_ray *)malloc(sizeof(t_ray))))
 	{
 		ft_putendl("Ray wasn't initated correctly");
 		exit(1);
@@ -44,11 +44,11 @@ t_env		*init_env(void)
 {
 	t_env	*e;
 
-	if (!(e = malloc(sizeof(t_env))))
+	if (!(e = (t_env *)malloc(sizeof(t_env))))
 		exit(1);
-	if (!(e->player = malloc(sizeof(t_player))))
+	if (!(e->player = (t_player *)malloc(sizeof(t_player))))
 		exit(1);
-	if (!(e->mlx = malloc(sizeof(t_mlx))))
+	if (!(e->mlx = (t_mlx *)malloc(sizeof(t_mlx))))
 		exit(1);
 	if ((e->mlx->mlx = mlx_init()) == NULL)
 		exit(1);
@@ -62,5 +62,7 @@ t_env		*init_env(void)
 	e->player->y = 5;
 	e->ray->posx = e->player->x;
 	e->ray->posy = e->player->y;
+	e->x_max = 689180108;
+	e->y_max = 689180108;
 	return (e);
 }

@@ -6,7 +6,7 @@
 /*   By: lprior <lprior@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/30 19:59:51 by pdavid            #+#    #+#             */
-/*   Updated: 2018/07/20 19:52:13 by lprior           ###   ########.fr       */
+/*   Updated: 2018/07/20 21:24:05 by lprior           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ int	printmap(t_env *current)
 		x = 0;
 		while (x != WIDTH_MAP)
 		{
-			printf("%d ", current->map[y][x]);
+			ft_printf("%d ", current->map[y][x]);
 			x++;
 		}
 		printf("\n");
@@ -37,9 +37,7 @@ int	main(int argc, char **argv)
 	t_env *e;
 
 	if (argc != 2)
-	{
 		exit(1);
-	}
 	e = init_env();
 	ft_initread(argv[1], e);
 	printmap(e);
